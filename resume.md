@@ -1,7 +1,7 @@
 # DEEPAK MANGLANI
 **Commercial & Operations Manager**
 
-Sharjah, United Arab Emirates | +971-55-6191139 | Dmanglani@hotmail.com | [Interactive Portfolio](https://dmanglani06-lab.github.io/My-Portfolio-/) | [LinkedIn Profile](https://www.linkedin.com/in/dmanglani) | [GitHub Profile](https://github.com/dmanglani06-lab)
+Sharjah, United Arab Emirates | +971-55-6191139 | Dmanglani@hotmail.com | [Interactive Portfolio](https://dmanglani06-lab.github.io/) | [LinkedIn Profile](https://www.linkedin.com/in/dmanglani) | [GitHub Profile](https://github.com/dmanglani06-lab)
 
 ---
 
