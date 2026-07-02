@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Deepak Manglani | 3D Dark Operations Center & Portfolio</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="dark_portfolio.css">
+  
+  <!-- Three.js CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+
+  <!-- WebGL Canvas Container for 3D Background -->
+  <div id="canvas-container"></div>
+
+  <!-- Floating Nav Bar -->
+  <header class="navbar">
+    <div class="logo">
+      <span class="logo-text">DEEPAK</span>
+      <span class="logo-sub">MANGLANI</span>
+    </div>
+    <nav class="nav-links">
+      <a href="#hero" class="active">Home</a>
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#crm">CRM Demo</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <a href="light_portfolio.html" class="btn btn-sm btn-secondary" style="margin-right: 8px;">Light Version</a>
+      <a href="index.html" class="btn btn-sm btn-outline" target="_blank">Print Resume</a>
+    </div>
+  </header>
+
+  <!-- MAIN SCROLL CONTAINER -->
+  <main class="scroll-container">
+
+    <!-- HERO SECTION -->
+    <section id="hero" class="section hero-section">
+      <div class="hero-content">
+        <div class="glow-tag">3D Dark Operations Center</div>
+        <h1 class="hero-title">Deepak Manglani</h1>
+        <h2 class="hero-subtitle">
+          <span class="text-static">Specialist in</span>
+          <span class="text-type" id="typewriter"></span>
+        </h2>
+        <p class="hero-desc">
+          Commercial Operations Manager bridging 14+ years of regional B2B logistics, procurement governance, and LED supply chains with a modern, agentic AI tech edge (Vibe Coding).
+        </p>
+        <div class="hero-buttons">
+          <a href="#crm" class="btn btn-primary">Try Custom CRM Demo</a>
+          <a href="#contact" class="btn btn-secondary">Let's Connect</a>
+        </div>
+      </div>
+      
+      <!-- Interactive 3D Sphere Widget Container -->
+      <div class="hero-3d-widget">
+        <div id="canvas-3d-widget"></div>
+        <div class="widget-overlay">
+          <span>WebGL Sphere Sandbox</span>
+          <p>Drag to rotate. Hover to warp waves.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="section about-section scroll-reveal">
+      <div class="section-header">
+        <h2>Strategic Overview</h2>
+        <span class="header-line"></span>
+      </div>
+      <div class="about-grid">
+        
+        <!-- About Text - 3D Tilt Card -->
+        <div class="about-card card-tilt">
+          <h3>Operations & Automation</h3>
+          <p>
+            With over 14 years of regional success driving cross-functional alignment within UAE B2B markets, I have navigated high-volume supply chains, protected gross product margins, and orchestrated complex customs operations.
+          </p>
+          <p>
+            Recently, I adopted the **AI Vibe Coding** paradigm. Using LLMs and multi-agent workflow orchestration via the Google Antigravity SDK, I now rapid-prototype customized business software (such as internal CRMs and inventory audit scripts) to eliminate software subscription overheads and automate manual operations.
+          </p>
+          <div class="stats-row">
+            <div class="stat-box">
+              <span class="stat-num">14+</span>
+              <span class="stat-label">Years B2B Experience</span>
+            </div>
+            <div class="stat-box">
+              <span class="stat-num">2 Mo</span>
+              <span class="stat-label">Vibe Coding Mastery</span>
+            </div>
+            <div class="stat-box">
+              <span class="stat-num">$0</span>
+              <span class="stat-label">Software Licensing Cost</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Professional Values Card - 3D Tilt Card -->
+        <div class="about-values card-tilt">
+          <h3>Core Philosophy</h3>
+          <ul class="values-list">
+            <li>
+              <div class="val-icon">📦</div>
+              <div class="val-text">
+                <strong>Structured Compliance:</strong> Standardizing customs declarations and audits to keep global trade corridors fluid.
+              </div>
+            </li>
+            <li>
+              <div class="val-icon">🤖</div>
+              <div class="val-text">
+                <strong>Agentic Innovation:</strong> Building specialized multi-agent workflows to automate manual reconciliations.
+              </div>
+            </li>
+            <li>
+              <div class="val-icon">💰</div>
+              <div class="val-text">
+                <strong>Commercial Focus:</strong> Managing freight quote metrics, landed costs, and contract risks to protect margins.
+              </div>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- EXPERIENCE SECTION -->
+    <section id="experience" class="section experience-section scroll-reveal">
+      <div class="section-header">
+        <h2>Career Timeline</h2>
+        <span class="header-line"></span>
+      </div>
+
+      <!-- Interactive Tab Filters -->
+      <div class="timeline-filters">
+        <button class="filter-btn active" data-filter="all">All Items</button>
+        <button class="filter-btn" data-filter="commercial">Commercial & Sales</button>
+        <button class="filter-btn" data-filter="logistics">Logistics & IT</button>
+        <button class="filter-btn" data-filter="projects">Key B2B Projects</button>
+        <button class="filter-btn" data-filter="volunteering">Volunteering</button>
+      </div>
+
+      <!-- Experience 3D Carousel / Slider -->
+      <div class="experience-deck">
+        
+        <!-- Experience Card 1 -->
+        <div class="exp-card card-tilt active" data-cat="commercial">
+          <div class="exp-badge">Current Role</div>
+          <div class="exp-header">
+            <h3>Commercial Operations & Sales Manager</h3>
+            <span class="exp-company">Tultop International FZC LLC</span>
+            <span class="exp-date">01/2024 - Present | Sharjah, UAE</span>
+          </div>
+          <ul class="exp-bullets">
+            <li><strong>B2B Pipeline Governance:</strong> Spearhead sales pipeline execution and purchasing workflows for high-value B2B electronics and LED industrial lines.</li>
+            <li><strong>Margin & Risk Optimization:</strong> Direct contract reviews, tariff positioning, and quote auditing, successfully protecting gross product margins.</li>
+            <li><strong>AI Integration:</strong> Prototyped a custom internal CRM layout using LLMs and tested automated inventory auditing workflows via Google Antigravity.</li>
+          </ul>
+        </div>
+
+        <!-- Experience Card 2 -->
+        <div class="exp-card card-tilt" data-cat="logistics">
+          <div class="exp-badge">Logistics Focus</div>
+          <div class="exp-header">
+            <h3>Logistics & Procurement Manager</h3>
+            <span class="exp-company">Tultop International FZC LLC</span>
+            <span class="exp-date">12/2015 - 12/2023 | Sharjah, UAE</span>
+          </div>
+          <ul class="exp-bullets">
+            <li><strong>Supply Chain Infrastructure:</strong> Directed end-to-end import, export, and re-export logistics corridors across critical Middle Eastern channels.</li>
+            <li><strong>Customs Compliance:</strong> Standardized customs declaration clearings, landing check-offs, and compliance protocols, ensuring zero regulatory clearance delays.</li>
+            <li><strong>Financial Auditing:</strong> Administered ledger accounts, cost-center tracking, and financial reconciliation workflows using Tally ERP.</li>
+          </ul>
+        </div>
+
+        <!-- Experience Card 3 -->
+        <div class="exp-card card-tilt" data-cat="commercial">
+          <div class="exp-badge">B2B Management</div>
+          <div class="exp-header">
+            <h3>Sales, Purchase & Operations Manager</h3>
+            <span class="exp-company">Spark Communications L.L.C</span>
+            <span class="exp-date">03/2012 - 07/2015 | Dubai, UAE</span>
+          </div>
+          <ul class="exp-bullets">
+            <li><strong>International Sourcing:</strong> Managed import/export contract sourcing with electronics manufacturers across China, the UK, and the USA.</li>
+            <li><strong>Logistics Cost Control:</strong> Audited freight quotes and container manifests, optimizing multi-modal logistics lanes and reducing transportation overhead.</li>
+          </ul>
+        </div>
+
+        <!-- Experience Card 4 -->
+        <div class="exp-card card-tilt" data-cat="logistics">
+          <div class="exp-badge">IT & Systems</div>
+          <div class="exp-header">
+            <h3>Trainee Network & Systems Administrator</h3>
+            <span class="exp-company">Rajhans Industries Pvt LTD</span>
+            <span class="exp-date">09/2010 - 07/2011 | Rajasthan, India</span>
+          </div>
+          <ul class="exp-bullets">
+            <li><strong>Server Integrity:</strong> Managed network switch configurations, printer servers, and LAN node connectivity.</li>
+            <li><strong>Software Patching:</strong> Configured updates and system patches for active tender tracking applications.</li>
+          </ul>
+        </div>
+
+        <!-- Experience Card 5: Project 1 -->
+        <div class="exp-card card-tilt" data-cat="projects">
+          <div class="exp-badge">15%-18% Cost Cut</div>
+          <div class="exp-header">
+            <h3>Vincitore Benessere Luxury Landmark</h3>
+            <span class="exp-company">Dubai, UAE</span>
+            <span class="exp-date">Specialized B2B Lighting Integration</span>
+          </div>
+          <ul class="exp-bullets">
+            <li><strong>Project Scope:</strong> Directed end-to-end commercial luminaire integration for a premium residential development, covering indoor fixtures, facade setups, and parking networks.</li>
+            <li><strong>Cost Efficiency:</strong> Negotiated direct-purchasing Chinese factory margins to maximize gross profits.</li>
+            <li><strong>Service Delivery:</strong> Aligned technical specifications with complex Roman architectural requirements, delivering zero-variance product alignment.</li>
+          </ul>
+        </div>
+
+        <!-- Experience Card 6: Project 2 -->
+        <div class="exp-card card-tilt" data-cat="projects">
+          <div class="exp-badge">12%-15% Saved</div>
+          <div class="exp-header">
+            <h3>Al Jaddaf Commercial Tower High-Rise</h3>
+            <span class="exp-company">Dubai, UAE</span>
+            <span class="exp-date"> waterproof IP66/IP67 Facade Lighting</span>
+          </div>
+          <ul class="exp-bullets">
+            <li><strong>Project Scope:</strong> Led procurement execution for a high-rise exterior facade illumination array.</li>
+            <li><strong>Cost Efficiency:</strong> Sourced materials directly from components factories, bypassing intermediate markup channels.</li>
+            <li><strong>Service Delivery:</strong> Deployed tactical on-site teams to beat high-stakes builder deadlines, securing repeat business.</li>
+          </ul>
+        </div>
+
+        <!-- Experience Card 7: Project 3 -->
+        <div class="exp-card card-tilt" data-cat="projects">
+          <div class="exp-badge">15%-20% Sliced</div>
+          <div class="exp-header">
+            <h3>High-End Abu Dhabi Club & Villa</h3>
+            <span class="exp-company">Abu Dhabi, UAE</span>
+            <span class="exp-date">Architectural Lounge & Pool Lighting</span>
+          </div>
+          <ul class="exp-bullets">
+            <li><strong>Project Scope:</strong> Supervised commercial supply and installation pipelines for luxury ambient architectural lounge layouts and custom pool systems.</li>
+            <li><strong>Cost Efficiency:</strong> Sourced raw LED aluminum profiles and high-density components directly from factories rather than pre-assembled brands.</li>
+            <li><strong>Service Delivery:</strong> Managed low-voltage IP68 pool installation safety compliance, securing direct client referrals.</li>
+          </ul>
+        </div>
+
+        <!-- Experience Card 8: Project 4 -->
+        <div class="exp-card card-tilt" data-cat="projects">
+          <div class="exp-badge">20% Saved</div>
+          <div class="exp-header">
+            <h3>Al Khawaneej Private Luxury Villa</h3>
+            <span class="exp-company">Dubai, UAE</span>
+            <span class="exp-date">Facade & Perimeter Illumination</span>
+          </div>
+          <ul class="exp-bullets">
+            <li><strong>Project Scope:</strong> Controlled facade and perimeter illumination systems, executing layouts with high-density LED Neon Flex and outdoor spike arrays.</li>
+            <li><strong>Cost Efficiency:</strong> Substituted standard fixtures with corrosion-resistant outdoor spike arrays, reducing long-term maintenance costs.</li>
+            <li><strong>Service Delivery:</strong> Coordinated outdoor waterproof seal testing, completing installation 3 days ahead of handover.</li>
+          </ul>
+        </div>
+
+        <!-- Experience Card 9: Project 5 -->
+        <div class="exp-card card-tilt" data-cat="projects">
+          <div class="exp-badge">15% Markup Cut</div>
+          <div class="exp-header">
+            <h3>Fillit Oud Metha Commercial Office</h3>
+            <span class="exp-company">Dubai, UAE</span>
+            <span class="exp-date">Interior Office Commercial Procurement</span>
+          </div>
+          <ul class="exp-bullets">
+            <li><strong>Project Scope:</strong> Managed total interior procurement and fit-out installations, covering magnetic tracklights, linear grids, custom frames, and decorative fixtures.</li>
+            <li><strong>Cost Efficiency:</strong> Sourced LED drivers and extrusions separately, assembling linear grids on-site to reduce supplier margins.</li>
+            <li><strong>Service Delivery:</strong> Arranged staggered nighttime installations, bypassing office business hours for seamless handover.</li>
+          </ul>
+        </div>
+
+        <!-- Experience Card 10: Volunteering 1 -->
+        <div class="exp-card card-tilt" data-cat="volunteering">
+          <div class="exp-badge">Volunteering</div>
+          <div class="exp-header">
+            <h3>Exhibition and Security Manager</h3>
+            <span class="exp-company">India Trade and Exhibitions Centre M.E</span>
+            <span class="exp-date">09/2018 - 11/2018 | Dubai, UAE</span>
+          </div>
+          <ul class="exp-bullets">
+            <li><strong>Stakeholder Logistics:</strong> Partnered with the Dubai Business Leader’s Forum to coordinate physical logistics and operations for the India-UAE Partnership Summit 2018.</li>
+            <li><strong>Infrastructure Allocation:</strong> Supervised layout assembly and stand shell scheme assignments for exhibitors.</li>
+            <li><strong>Crowd Flow & Security:</strong> Managed registration frameworks and crowd-control procedures, optimizing venue entry timelines.</li>
+          </ul>
+        </div>
+
+        <!-- Experience Card 11: Volunteering 2 -->
+        <div class="exp-card card-tilt" data-cat="volunteering">
+          <div class="exp-badge">Volunteering</div>
+          <div class="exp-header">
+            <h3>Education Event Coordinator</h3>
+            <span class="exp-company">India Trade and Exhibitions Centre M.E</span>
+            <span class="exp-date">12/2018 - 01/2019 | Dubai, UAE</span>
+          </div>
+          <ul class="exp-bullets">
+            <li><strong>Event Operations:</strong> Coordinated spacing and institutional setups for AFAIRS Exhibitions during The Great India Education Fair.</li>
+            <li><strong>Analytical Reporting:</strong> Compiled institutional engagement metrics and Minutes of Meetings with senior academic directors.</li>
+            <li><strong>Asset Tracking:</strong> Audited checklists for material distributions and collateral inventories.</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Experience Controls -->
+      <div class="deck-controls">
+        <button id="prev-exp" class="btn btn-icon">←</button>
+        <span id="deck-progress">1 / 6</span>
+        <button id="next-exp" class="btn btn-icon">→</button>
+      </div>
+
+    </section>
+
+    <!-- CRM PROTOTYPE SECTION -->
+    <section id="crm" class="section crm-section scroll-reveal">
+      <div class="section-header">
+        <h2>Live CRM Concept Demo</h2>
+        <span class="header-line"></span>
+      </div>
+      
+      <p class="crm-intro-text">
+        In my current role, I designed a customized, zero-subscription CRM workflow layout to track B2B sales pipelines. Test the **live interactive Kanban simulator** below by dragging and dropping electronics sales cards.
+      </p>
+
+      <!-- Interactive CRM Kanban Board -->
+      <div class="crm-board-container card-tilt">
+        
+        <div class="crm-board-header">
+          <div class="board-title">B2B Trade CRM v1.0.0</div>
+          <div class="board-controls">
+            <button id="add-lead-btn" class="btn btn-sm btn-primary">+ Add B2B Lead</button>
+            <button id="reset-board-btn" class="btn btn-sm btn-outline">Reset Board</button>
+          </div>
+        </div>
+
+        <!-- Kanban Board Board Grid -->
+        <div class="kanban-grid">
+          
+          <!-- Column 1: Prospecting -->
+          <div class="kanban-column" id="col-prospect">
+            <div class="col-header">
+              <span class="col-bullet color-prospect"></span>
+              <h4>Prospecting</h4>
+              <span class="col-count" id="count-prospect">2</span>
+            </div>
+            <div class="kanban-cards-wrapper" data-status="prospect">
+              
+              <!-- Card 1 -->
+              <div class="kanban-card" draggable="true" id="lead-1">
+                <div class="card-tag tag-electronics">Industrial LED</div>
+                <h5>Al-Mansoor Trading FZC</h5>
+                <div class="card-detail-row">
+                  <span>Target Value:</span>
+                  <strong>$45,000</strong>
+                </div>
+                <div class="card-detail-row">
+                  <span>LED Panels:</span>
+                  <strong>2,500 Units</strong>
+                </div>
+              </div>
+
+              <!-- Card 2 -->
+              <div class="kanban-card" draggable="true" id="lead-2">
+                <div class="card-tag tag-sourcing">Electronics Sourcing</div>
+                <h5>Dubai SmartTech L.L.C</h5>
+                <div class="card-detail-row">
+                  <span>Target Value:</span>
+                  <strong>$18,500</strong>
+                </div>
+                <div class="card-detail-row">
+                  <span>Cables & Hubs:</span>
+                  <strong>10,000 Units</strong>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Column 2: In Negotiation -->
+          <div class="kanban-column" id="col-negotiation">
+            <div class="col-header">
+              <span class="col-bullet color-negotiation"></span>
+              <h4>Negotiation</h4>
+              <span class="col-count" id="count-negotiation">1</span>
+            </div>
+            <div class="kanban-cards-wrapper" data-status="negotiation">
+              
+              <!-- Card 3 -->
+              <div class="kanban-card" draggable="true" id="lead-3">
+                <div class="card-tag tag-electronics">Electronics</div>
+                <h5>Zayed Telecom distributor</h5>
+                <div class="card-detail-row">
+                  <span>Target Value:</span>
+                  <strong>$62,000</strong>
+                </div>
+                <div class="card-detail-row">
+                  <span>Display Panels:</span>
+                  <strong>1,200 Units</strong>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Column 3: Tariff & Risk Review -->
+          <div class="kanban-column" id="col-tariff">
+            <div class="col-header">
+              <span class="col-bullet color-tariff"></span>
+              <h4>Tariff & Risk Review</h4>
+              <span class="col-count" id="count-tariff">1</span>
+            </div>
+            <div class="kanban-cards-wrapper" data-status="tariff">
+              
+              <!-- Card 4 -->
+              <div class="kanban-card" draggable="true" id="lead-4">
+                <div class="card-tag tag-logistics">Customs & Logistics</div>
+                <h5>Shenzhen Opto Import</h5>
+                <div class="card-detail-row">
+                  <span>Duty Bracket:</span>
+                  <strong>HS-8528.59 (5%)</strong>
+                </div>
+                <div class="card-detail-row">
+                  <span>Insurance Margin:</span>
+                  <strong>94.2% Protected</strong>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Column 4: Completed -->
+          <div class="kanban-column" id="col-completed">
+            <div class="col-header">
+              <span class="col-bullet color-completed"></span>
+              <h4>Completed</h4>
+              <span class="col-count" id="count-completed">0</span>
+            </div>
+            <div class="kanban-cards-wrapper" data-status="completed">
+              <!-- Cards placed here via drag-and-drop -->
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Add Lead Dialog overlay (hidden initially) -->
+      <div id="add-lead-modal" class="modal">
+        <div class="modal-content card-tilt">
+          <h3>Create New B2B Lead Card</h3>
+          <div class="form-group">
+            <label for="lead-company">Company Name</label>
+            <input type="text" id="lead-company" placeholder="e.g. Al-Futtaim Logistics">
+          </div>
+          <div class="form-group">
+            <label for="lead-tag">Category Tag</label>
+            <select id="lead-tag">
+              <option value="Industrial LED">Industrial LED</option>
+              <option value="Electronics Sourcing">Electronics Sourcing</option>
+              <option value="Customs & Logistics">Customs & Logistics</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="lead-value">Target Value ($)</label>
+            <input type="number" id="lead-value" placeholder="e.g. 50000">
+          </div>
+          <div class="form-group">
+            <label for="lead-desc">Key Details / Units</label>
+            <input type="text" id="lead-desc" placeholder="e.g. 4,000 components">
+          </div>
+          <div class="modal-actions">
+            <button id="modal-submit-btn" class="btn btn-primary">Create Card</button>
+            <button id="modal-close-btn" class="btn btn-outline">Cancel</button>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section id="skills" class="section skills-section scroll-reveal">
+      <div class="section-header">
+        <h2>Professional Skills Matrix</h2>
+        <span class="header-line"></span>
+      </div>
+
+      <div class="skills-grid">
+        
+        <!-- Skill Card 1: Operations -->
+        <div class="skill-card card-tilt">
+          <div class="skill-icon">💼</div>
+          <h3>Operations Governance</h3>
+          <ul class="skill-list">
+            <li>
+              <span>Sales Pipeline Forecasting</span>
+              <div class="skill-bar"><div class="fill" style="width: 95%;"></div></div>
+            </li>
+            <li>
+              <span>Contract Sourcing & Negotiation</span>
+              <div class="skill-bar"><div class="fill" style="width: 90%;"></div></div>
+            </li>
+            <li>
+              <span>Gross Margin Optimization</span>
+              <div class="skill-bar"><div class="fill" style="width: 88%;"></div></div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Skill Card 2: Sourcing -->
+        <div class="skill-card card-tilt">
+          <div class="skill-icon">🚢</div>
+          <h3>Logistics & Customs</h3>
+          <ul class="skill-list">
+            <li>
+              <span>Multi-Modal Freight Sourcing</span>
+              <div class="skill-bar"><div class="fill" style="width: 92%;"></div></div>
+            </li>
+            <li>
+              <span>Customs Clearing & Duty Audits</span>
+              <div class="skill-bar"><div class="fill" style="width: 95%;"></div></div>
+            </li>
+            <li>
+              <span>Regulatory Compliance & Insurance</span>
+              <div class="skill-bar"><div class="fill" style="width: 89%;"></div></div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Skill Card 3: AI & Systems -->
+        <div class="skill-card card-tilt">
+          <div class="skill-icon">⚡</div>
+          <h3>AI & Business Automation</h3>
+          <ul class="skill-list">
+            <li>
+              <span>Vibe Coding & CRM Layouts</span>
+              <div class="skill-bar"><div class="fill animate-purple" style="width: 90%;"></div></div>
+            </li>
+            <li>
+              <span>Multi-Agent Orchestration (Antigravity)</span>
+              <div class="skill-bar"><div class="fill animate-purple" style="width: 85%;"></div></div>
+            </li>
+            <li>
+              <span>Financial Logging & Ledger (Tally ERP)</span>
+              <div class="skill-bar"><div class="fill animate-purple" style="width: 95%;"></div></div>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="section contact-section scroll-reveal">
+      <div class="section-header">
+        <h2>Get In Touch</h2>
+        <span class="header-line"></span>
+      </div>
+
+      <div class="contact-grid">
+        
+        <!-- Contact Information Details -->
+        <div class="contact-info card-tilt">
+          <h3>Connection Details</h3>
+          <p>If you're seeking a Commercial Operations Leader who can build business intelligence workflows and agentic audits in-house, let's talk.</p>
+          
+          <ul class="contact-links-list">
+            <li>
+              <strong>Location:</strong>
+              <span>Sharjah, United Arab Emirates</span>
+            </li>
+            <li>
+              <strong>Email:</strong>
+              <a href="mailto:Dmanglani@hotmail.com">Dmanglani@hotmail.com</a>
+            </li>
+            <li>
+              <strong>Phone:</strong>
+              <span>+971-55-6191139</span>
+            </li>
+            <li>
+              <strong>GitHub:</strong>
+              <a href="https://github.com/dmanglani06-lab" target="_blank">github.com/dmanglani06-lab</a>
+            </li>
+            <li>
+              <strong>LinkedIn:</strong>
+              <a href="https://linkedin.com/in/dmanglani" target="_blank">linkedin.com/in/dmanglani</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Glassmorphic Form -->
+        <form class="contact-form card-tilt" id="portfolio-contact-form">
+          <h3>Send a Message</h3>
+          <div class="form-group">
+            <label for="form-name">Full Name</label>
+            <input type="text" id="form-name" required placeholder="John Doe">
+          </div>
+          <div class="form-group">
+            <label for="form-email">Email Address</label>
+            <input type="email" id="form-email" required placeholder="john@example.com">
+          </div>
+          <div class="form-group">
+            <label for="form-msg">Message</label>
+            <textarea id="form-msg" required rows="4" placeholder="How can we collaborate?"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Inquiry</button>
+        </form>
+
+      </div>
+    </section>
+
+    <!-- Portfolio footer -->
+    <footer class="portfolio-footer">
+      <p>&copy; 2026 Deepak Manglani. Designed & built using generative vibe coding and Three.js.</p>
+    </footer>
+
+  </main>
+
+  <!-- JS Scripts -->
+  <script src="dark_portfolio.js"></script>
+</body>
+</html>

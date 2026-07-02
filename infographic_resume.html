@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Deepak Manglani - Infographic Resume</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0f172a;       /* Slate 900 */
+      --secondary: #1e293b;     /* Slate 800 */
+      --accent: #b45309;        /* Brushed Amber/Gold */
+      --accent-light: #fef3c7;  /* Amber 100 */
+      --teal-accent: #0d9488;   /* Teal 600 */
+      --teal-light: #f0fdfa;    /* Teal 50 */
+      --text-main: #334155;     /* Slate 700 */
+      --text-light: #64748b;    /* Slate 500 */
+      --bg-light: #f8fafc;      /* Slate 50 */
+      --border: #e2e8f0;        /* Slate 200 */
+      --white: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text-main);
+      background-color: #cbd5e1;
+      line-height: 1.4;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Print/Screen container sizes */
+    .page {
+      background: #ffffff;
+      width: 210mm;
+      height: 297mm;
+      margin: 20px auto;
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Premium Header */
+    .header {
+      background: linear-gradient(135deg, #0b1a2e, #0d9488);
+      color: var(--white);
+      padding: 30px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 4px solid var(--accent);
+    }
+
+    .header-titles h1 {
+      font-family: 'Cambria', 'Georgia', serif;
+      font-size: 34px;
+      font-weight: 800;
+      letter-spacing: -0.01em;
+      line-height: 1.1;
+      color: var(--white);
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+    }
+
+    .header-titles h2 {
+      font-family: 'Cambria', 'Georgia', serif;
+      font-size: 13.5px;
+      font-weight: 700;
+      color: #fbbf24;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-top: 4px;
+      white-space: nowrap;
+    }
+
+    .header-contacts {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px 16px;
+      font-size: 13px;
+      color: var(--white);
+      font-weight: 500;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .contact-item a {
+      color: var(--white);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .contact-item svg {
+      width: 15px;
+      height: 15px;
+      fill: #fbbf24;
+    }
+
+    /* Infographic Panels Grid */
+    .content-grid {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      flex-grow: 1;
+      height: calc(100% - 110px);
+    }
+
+    .panel-left {
+      background-color: #ffffff;
+      border-right: 1.5px solid var(--border);
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .panel-right {
+      padding: 24px 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    /* Section Headings */
+    .section-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 15.5px;
+      font-weight: 700;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 10px;
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 4px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .section-title svg {
+      width: 16px;
+      height: 16px;
+      fill: var(--primary);
+    }
+
+    /* Infographic Summary Block */
+    .intro-block {
+      background-color: var(--bg-light);
+      border-left: 4px solid var(--teal-accent);
+      padding: 12px 14px;
+      border-radius: 0 8px 8px 0;
+      margin-bottom: 8px;
+    }
+
+    .intro-block p {
+      font-size: 15px;
+      line-height: 1.5;
+      color: var(--text-main);
+    }
+
+    /* SVG Donut Progress Chart Grid */
+    .metric-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 8px;
+    }
+
+    .metric-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 12px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .donut-svg {
+      width: 60px;
+      height: 60px;
+      transform: rotate(-90deg);
+      margin-bottom: 6px;
+    }
+
+    .donut-bg {
+      fill: none;
+      stroke: var(--border);
+      stroke-width: 5;
+    }
+
+    .donut-fill {
+      fill: none;
+      stroke: var(--accent);
+      stroke-width: 5;
+      stroke-dasharray: 100;
+      stroke-linecap: round;
+    }
+
+    .donut-fill.teal {
+      stroke: var(--teal-accent);
+    }
+
+    .donut-fill.navy {
+      stroke: var(--primary);
+    }
+
+    .metric-value {
+      font-family: 'Outfit', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--primary);
+      margin-top: -42px;
+      margin-bottom: 24px;
+    }
+
+    .metric-label {
+      font-size: 10.5px;
+      font-weight: 600;
+      color: var(--text-main);
+      line-height: 1.1;
+    }
+
+    .metric-desc {
+      font-size: 9px;
+      color: var(--text-light);
+      margin-top: 2px;
+    }
+
+    /* Competency Visual Tags */
+    .badge-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .infographic-badge {
+      font-size: 12.5px;
+      font-weight: 500;
+      padding: 4px 8px;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+      background: var(--white);
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .infographic-badge.gold {
+      background-color: var(--accent-light);
+      color: #92400e;
+      border-color: #fde68a;
+    }
+
+    .infographic-badge.teal {
+      background-color: var(--teal-light);
+      color: #0f766e;
+      border-color: #a7f3d0;
+    }
+
+    /* Infographic Timeline Layout */
+    .infographic-timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      position: relative;
+    }
+
+    .timeline-node {
+      display: grid;
+      grid-template-columns: 44px 1fr;
+      gap: 12px;
+      position: relative;
+    }
+
+    .timeline-node::after {
+      content: "";
+      position: absolute;
+      left: 21px;
+      top: 38px;
+      bottom: -22px;
+      width: 2px;
+      background-color: var(--border);
+    }
+
+    .timeline-node:last-child::after {
+      display: none;
+    }
+
+    .node-icon-box {
+      width: 44px;
+      height: 44px;
+      background-color: var(--primary);
+      border-radius: 50%;
+      border: 3px solid var(--white);
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 10;
+    }
+
+    .node-icon-box svg {
+      width: 18px;
+      height: 18px;
+      fill: var(--white);
+    }
+
+    .node-icon-box.accent-icon {
+      background-color: var(--accent);
+    }
+
+    .node-icon-box.teal-icon {
+      background-color: var(--teal-accent);
+    }
+
+    .node-content-box {
+      background: var(--white);
+      border: 1.5px solid var(--border);
+      border-radius: 8px;
+      padding: 10px 12px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+
+    .node-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 4px;
+    }
+
+    .node-title-main {
+      font-size: 15.5px;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    .node-date {
+      font-size: 9.5px;
+      font-weight: 700;
+      color: var(--accent);
+      background-color: var(--accent-light);
+      padding: 1px 6px;
+      border-radius: 4px;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .node-subtext {
+      font-size: 13.5px;
+      font-weight: 600;
+      color: var(--text-light);
+      margin-top: -2px;
+      margin-bottom: 4px;
+    }
+
+    .node-bullets {
+      list-style-type: none;
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+
+    .node-bullets li {
+      font-size: 14px;
+      line-height: 1.35;
+      color: var(--text-main);
+      position: relative;
+      padding-left: 12px;
+    }
+
+    .node-bullets li::before {
+      content: "▪";
+      color: var(--text-light);
+      font-size: 8px;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
+    /* Highlight badge box inside nodes */
+    .node-highlight-box {
+      background-color: var(--teal-light);
+      border: 1px dashed var(--teal-accent);
+      padding: 6px 8px;
+      border-radius: 6px;
+      margin-top: 6px;
+    }
+
+    .node-highlight-title {
+      font-size: 12.5px;
+      font-weight: 700;
+      color: #0f766e;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 2px;
+    }
+
+    .node-highlight-desc {
+      font-size: 13px;
+      color: var(--secondary);
+      line-height: 1.3;
+    }
+
+    /* Education Item */
+    .edu-item {
+      margin-bottom: 8px;
+    }
+
+    .edu-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .edu-title {
+      font-size: 13.5px;
+      font-weight: 600;
+      color: var(--primary);
+    }
+
+    .edu-desc {
+      font-size: 12px;
+      color: var(--text-light);
+    }
+
+    /* Mini Header page 2 */
+    .header-mini {
+      background: linear-gradient(135deg, #0b1a2e, #0d9488);
+      color: var(--white);
+      padding: 16px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 3px solid var(--accent);
+    }
+
+    .header-mini h2 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--white);
+    }
+
+    .header-mini span {
+      font-size: 12px;
+      color: #fbbf24;
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+    }
+
+    /* Key Project Card (Infographic style) */
+    .project-card {
+      background: var(--bg-light);
+      border: 1.5px solid var(--border);
+      border-radius: 8px;
+      padding: 10px 12px;
+      display: grid;
+      grid-template-columns: 40px 1fr;
+      gap: 12px;
+      align-items: start;
+    }
+
+    .project-icon-box {
+      width: 40px;
+      height: 40px;
+      background-color: var(--teal-accent);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .project-icon-box svg {
+      width: 20px;
+      height: 20px;
+      fill: var(--white);
+    }
+
+    .project-details h4 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 2px;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+
+    .project-details h4 span {
+      font-family: 'Inter', sans-serif;
+      font-size: 9.5px;
+      background: var(--teal-light);
+      color: #0f766e;
+      padding: 2px 6px;
+      border-radius: 3px;
+      border: 1px solid #ccfbf1;
+      font-weight: 600;
+      white-space: nowrap;
+      flex-shrink: 0;
+      align-self: flex-start;
+      margin-left: 8px;
+    }
+
+    .project-details p {
+      font-size: 12px;
+      color: var(--text-main);
+      line-height: 1.35;
+      margin-top: 4px;
+    }
+
+    /* Footer styling */
+    .footer {
+      height: 30px;
+      border-top: 1px solid var(--border);
+      padding: 0 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 10px;
+      color: var(--text-light);
+      background-color: #ffffff;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+
+    /* Compact Layout override for Page 2 */
+    .panel-right.compact-layout {
+      gap: 8px;
+      padding: 12px 30px;
+    }
+
+    .compact-layout .section-title {
+      margin-bottom: 8px;
+      padding-bottom: 4px;
+    }
+
+    .compact-layout .infographic-timeline {
+      gap: 6px;
+    }
+
+    .compact-layout .timeline-node {
+      gap: 6px;
+    }
+
+    .compact-layout .project-card {
+      padding: 6px 10px;
+    }
+
+    .compact-layout .node-title-main {
+      font-size: 15px;
+    }
+
+    .compact-layout .node-bullets li {
+      font-size: 14px;
+      margin-bottom: 4px;
+    }
+
+    .compact-layout .node-subtext {
+      font-size: 13.5px;
+    }
+
+    .compact-layout .project-details h4 {
+      font-size: 13.5px;
+    }
+
+    .compact-layout .project-details p {
+      font-size: 12px;
+    }
+
+    /* Left Panel Compact Style */
+    .panel-left.compact-layout {
+      padding: 12px 24px;
+      gap: 12px;
+    }
+
+    @media print {
+      @page {
+        size: A4;
+        margin: 0;
+      }
+      body {
+        background-color: var(--white);
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      .page {
+        margin: 0;
+        box-shadow: none;
+        page-break-after: always;
+        height: 297mm;
+        width: 210mm;
+        box-sizing: border-box;
+      }
+      .page:last-child {
+        page-break-after: avoid;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- PAGE 1 -->
+  <div class="page" id="page-1">
+    
+    <!-- Executive Header -->
+    <header class="header">
+      <div class="header-titles">
+        <h1>DEEPAK MANGLANI</h1>
+        <h2>Commercial & Operations Manager</h2>
+      </div>
+      <div class="header-contacts">
+        <div class="contact-item">
+          <!-- Pin -->
+          <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          <span>Sharjah, UAE</span>
+        </div>
+        <div class="contact-item">
+          <!-- Phone -->
+          <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+          <span>+971-55-6191139</span>
+        </div>
+        <div class="contact-item">
+          <!-- Email -->
+          <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          <a href="mailto:Dmanglani@hotmail.com">Dmanglani@hotmail.com</a>
+        </div>
+        <div class="contact-item">
+          <!-- LinkedIn -->
+          <svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+          <a href="https://linkedin.com/in/dmanglani" target="_blank">linkedin.com/in/dmanglani</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Content Grid -->
+    <div class="content-grid">
+      
+      <!-- Left Column: Metrics & Credentials -->
+      <aside class="panel-left">
+        
+        <!-- Interactive Career Breakdown (SVG Donut Charts) -->
+        <div class="sidebar-section">
+          <div class="section-title">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H7c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.04-.42 1.99-1.07 2.75z"/></svg>
+            Career Focus
+          </div>
+          
+          <div class="metric-grid">
+            <!-- Metric 1: B2B SCM -->
+            <div class="metric-card">
+              <svg class="donut-svg">
+                <circle class="donut-bg" cx="30" cy="30" r="25"/>
+                <circle class="donut-fill" cx="30" cy="30" r="25" stroke-dashoffset="30"/> <!-- 70% -->
+              </svg>
+              <div class="metric-value">70%</div>
+              <span class="metric-label">B2B Logistics</span>
+              <span class="metric-desc">Import/Export & Supply chains</span>
+            </div>
+
+            <!-- Metric 2: Commercial Sales -->
+            <div class="metric-card">
+              <svg class="donut-svg">
+                <circle class="donut-bg" cx="30" cy="30" r="25"/>
+                <circle class="donut-fill teal" cx="30" cy="30" r="25" stroke-dashoffset="40"/> <!-- 60% -->
+              </svg>
+              <div class="metric-value">60%</div>
+              <span class="metric-label">Commercial Governance</span>
+              <span class="metric-desc">Risk audits & sales forecasting</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Competency Dashboard -->
+        <div class="sidebar-section">
+          <div class="section-title">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+            Operations Governance
+          </div>
+          <div class="badge-grid">
+            <span class="infographic-badge gold">Sales Pipelines</span>
+            <span class="infographic-badge gold">Global Sourcing</span>
+            <span class="infographic-badge gold">Contract CLM</span>
+            <span class="infographic-badge gold">Risk Mitigation</span>
+            <span class="infographic-badge gold">Customs clearance</span>
+            <span class="infographic-badge gold">Fit-Out Execution</span>
+          </div>
+        </div>
+
+        <!-- Foundations Education -->
+        <div class="sidebar-section">
+          <div class="section-title">
+            <svg viewBox="0 0 24 24"><path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/></svg>
+            Education
+          </div>
+          <div class="edu-item">
+            <div class="edu-title">B.Com (Commerce)</div>
+            <div class="edu-desc">Onkarmal Somani College, India</div>
+          </div>
+          <div class="edu-item">
+            <div class="edu-title">Shipping Management</div>
+            <div class="edu-desc">Jodhpur Institute, India</div>
+          </div>
+        </div>
+
+        <!-- Languages -->
+        <div class="sidebar-section">
+          <div class="section-title">
+            <svg viewBox="0 0 24 24"><path d="M12.87 15.07l-2.54-2.51.03-.03c1.74-1.94 2.98-4.17 3.71-6.53H17V4h-7V2H8v2H1v2h11.17C11.5 7.69 10.56 9.18 9.5 10.5c-.66-.74-1.2-1.58-1.62-2.5H5.88c.48 1.56 1.25 3.03 2.29 4.35L4.48 16.07 6 17.58l3.71-3.71 3.51 3.5 1.66-2.31zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"/></svg>
+            Languages
+          </div>
+          <div class="edu-item" style="display: flex; justify-content: space-between;">
+            <span class="edu-title">English</span>
+            <span class="edu-desc" style="font-weight:700;color:var(--accent);">Fluent</span>
+          </div>
+          <div class="edu-item" style="display: flex; justify-content: space-between;">
+            <span class="edu-title">Hindi</span>
+            <span class="edu-desc" style="font-weight:700;color:var(--accent);">Native</span>
+          </div>
+          <div class="edu-item" style="display: flex; justify-content: space-between;">
+            <span class="edu-title">Sindhi</span>
+            <span class="edu-desc" style="font-weight:700;color:var(--accent);">Native</span>
+          </div>
+        </div>
+
+      </aside>
+
+      <!-- Right Column: Timeline & Summary -->
+      <main class="panel-right">
+        
+        <!-- Summary Box -->
+        <section class="intro-block">
+          <p>
+            <strong>Commercial Operations & Sales Leader</strong> with over 14 years of regional success driving procurement governance, supply chain optimization, and margin protection within the UAE B2B electronics and industrial markets. Highly adept at aligning cross-functional teams, orchestrating complex import/export logistics, and leading large-scale trade events. Combines deep operational expertise with a digital edge, leveraging <strong>modern AI tools and workflow automation</strong> to prototype custom CRM solutions and streamline inventory audits, driving business agility and cost-efficiency.
+          </p>
+        </section>
+
+        <!-- Timeline Section -->
+        <section>
+          <div class="section-title">
+            <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm3.3 14.88L11 13V7h1.5v5.25l3.8 2.25-.81 1.38z"/></svg>
+            Career Timeline
+          </div>
+
+          <div class="infographic-timeline">
+            
+            <!-- Timeline Item 1 -->
+            <div class="timeline-node">
+              <div class="node-icon-box accent-icon">
+                <!-- Sales Tag SVG -->
+                <svg viewBox="0 0 24 24"><path d="M21.41 11.58l-9-9C12.05 2.22 11.55 2 11 2H4c-1.1 0-2 .9-2 2v7c0 .55.22 1.05.59 1.42l9 9c.36.36.86.58 1.41.58.55 0 1.05-.22 1.41-.59l7-7c.37-.36.59-.86.59-1.41 0-.55-.23-1.06-.59-1.42zM5.5 7C4.67 7 4 6.33 4 5.5S4.67 4 5.5 4 7 4.67 7 5.5 6.33 7 5.5 7z"/></svg>
+              </div>
+              <div class="node-content-box">
+                <div class="node-header">
+                  <span class="node-title-main">Commercial Operations & Sales Manager</span>
+                  <span class="node-date">01/2024 – Present</span>
+                </div>
+                <div class="node-subtext">Tultop International FZC LLC | Sharjah, UAE</div>
+                <ul class="node-bullets">
+                  <li><strong>B2B Pipeline Governance:</strong> Spearhead sales pipeline execution and purchasing workflows for high-value B2B electronics and LED industrial lines.</li>
+                  <li><strong>Margin & Risk Optimization:</strong> Direct contract reviews, tariff positioning, and quote auditing, protecting gross product margins.</li>
+                </ul>
+                
+                <!-- Process Automation visual highlight -->
+                <div class="node-highlight-box">
+                  <div class="node-highlight-title">Process Automation & Digital Innovation</div>
+                  <p class="node-highlight-desc">
+                    Prototyped custom internal CRM tools using open-source LLMs, reducing software licensing overhead and designing automated inventory auditing workflows.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Timeline Item 2 -->
+            <div class="timeline-node">
+              <div class="node-icon-box">
+                <!-- SCM Truck SVG -->
+                <svg viewBox="0 0 24 24"><path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm12 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg>
+              </div>
+              <div class="node-content-box">
+                <div class="node-header">
+                  <span class="node-title-main">Logistics & Procurement Manager</span>
+                  <span class="node-date">12/2015 – 12/2023</span>
+                </div>
+                <div class="node-subtext">Tultop International FZC LLC | Sharjah, UAE</div>
+                <ul class="node-bullets">
+                  <li><strong>Supply Chain Infrastructure:</strong> Directed end-to-end import, export, and re-export logistics corridors across critical regional channels.</li>
+                  <li><strong>Customs Compliance:</strong> Standardized customs declaration clearings, landing check-offs, and compliance protocols, ensuring zero regulatory clearance delays.</li>
+                  <li><strong>Financial Auditing:</strong> Administered ledger accounts, cost-center tracking, and financial reconciliation workflows using Tally ERP.</li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+      </main>
+
+    </div>
+
+    <!-- Page 1 Footer -->
+    <footer class="footer">
+      <span>Deepak Manglani — Infographic Resume</span>
+      <span>Page 1 of 2</span>
+    </footer>
+
+  </div>
+
+  <!-- PAGE 2 -->
+  <div class="page" id="page-2">
+    
+    <!-- Mini Header -->
+    <header class="header-mini">
+      <h2>DEEPAK MANGLANI</h2>
+      <span>Commercial & Operations Manager</span>
+    </header>
+
+    <!-- Content Columns -->
+    <div class="content-grid">
+      
+      <!-- Left Column: Skills & Certifications -->
+      <aside class="panel-left">
+        
+        <!-- IT & Automation Dashboard -->
+        <div class="sidebar-section">
+          <div class="section-title">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+            Business IT & Automation
+          </div>
+          <div class="badge-grid">
+            <span class="infographic-badge teal">CRM Prototyping</span>
+            <span class="infographic-badge teal">Workflow Automation</span>
+            <span class="infographic-badge teal">AI Integration</span>
+            <span class="infographic-badge teal">Process Optimization</span>
+            <span class="infographic-badge teal">Tally ERP</span>
+            <span class="infographic-badge teal">Network Admin</span>
+            <span class="infographic-badge teal">Data Reconciliation</span>
+          </div>
+        </div>
+
+        <!-- Professional Certifications -->
+        <div class="sidebar-section">
+          <div class="section-title">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+            Certifications
+          </div>
+          <div class="edu-item">
+            <div class="edu-title">Generative AI Bootcamp</div>
+            <div class="edu-inst">Outskill.com (2026)</div>
+          </div>
+          <div class="edu-item">
+            <div class="edu-title">Tally ERP Accountant</div>
+            <div class="edu-inst">Tally Academy, India</div>
+          </div>
+          <div class="edu-item">
+            <div class="edu-title">Hardware & Networking</div>
+            <div class="edu-inst">Jetking Certified (JCHNPP)</div>
+          </div>
+        </div>
+
+        <!-- Profiles -->
+        <div class="sidebar-section">
+          <div class="section-title">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+            Profiles
+          </div>
+          <div class="edu-item">
+            <div class="edu-title">GitHub Portfolio</div>
+            <div class="edu-inst"><a href="https://github.com/dmanglani06-lab" target="_blank" style="color:var(--text-main);text-decoration:none;">github.com/dmanglani06-lab</a></div>
+          </div>
+          <div class="edu-item">
+            <div class="edu-title">LinkedIn Profile</div>
+            <div class="edu-inst"><a href="https://linkedin.com/in/dmanglani" target="_blank" style="color:var(--text-main);text-decoration:none;">linkedin.com/in/dmanglani</a></div>
+          </div>
+        </div>
+
+      </aside>
+
+      <!-- Right Column: Timeline Page 2 & Projects -->
+      <main class="panel-right compact-layout">
+        
+        <!-- Experience Continued -->
+        <section>
+          <div class="section-title">
+            <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm3.3 14.88L11 13V7h1.5v5.25l3.8 2.25-.81 1.38z"/></svg>
+            Timeline (Continued)
+          </div>
+
+          <div class="infographic-timeline">
+            
+            <!-- Timeline Item 3: Spark -->
+            <div class="timeline-node">
+              <div class="node-icon-box">
+                <!-- Contract / Sourcing SVG -->
+                <svg viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
+              </div>
+              <div class="node-content-box">
+                <div class="node-header">
+                  <span class="node-title-main">Sales, Purchase & Operations Manager</span>
+                  <span class="node-date">03/2012 – 07/2015</span>
+                </div>
+                <div class="node-subtext">SPARK COMMUNICATIONS L.L.C | Dubai, UAE</div>
+                <ul class="node-bullets">
+                  <li><strong>International Sourcing:</strong> Managed import/export contract sourcing with electronics manufacturers across China, the UK, and the USA.</li>
+                  <li><strong>Logistics Cost Control:</strong> Audited freight quotes and container manifests, optimizing multi-modal logistics lanes and reducing transportation overhead.</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Timeline Item 5: Rajhans -->
+            <div class="timeline-node">
+              <div class="node-icon-box">
+                <!-- Server / Network SVG -->
+                <svg viewBox="0 0 24 24"><path d="M19 13H5c-1.1 0-2 .9-2 2v4c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-4c0-1.1-.9-2-2-2zM9 19H7v-2h2v2zm10 0h-2v-2h2v2zM19 3H5c-1.1 0-2 .9-2 2v4c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 9H7V7h2v2zm10 0h-2V7h2v2z"/></svg>
+              </div>
+              <div class="node-content-box">
+                <div class="node-header">
+                  <span class="node-title-main">Trainee Network & Systems Operations Administrator</span>
+                  <span class="node-date">09/2010 – 07/2011</span>
+                </div>
+                <div class="node-subtext">Rajhans Industries Pvt LTD | Rajasthan, India</div>
+                <ul class="node-bullets">
+                  <li><strong>Server Integrity:</strong> Managed network switch configurations, printer servers, and LAN node connectivity.</li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- Project Spotlight Section -->
+        <section>
+          <div class="section-title">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H7c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.04-.42 1.99-1.07 2.75z"/></svg>
+            Key Projects & Deal Highlights
+          </div>
+          
+          <div style="display:flex; flex-direction:column; gap:8px;">
+            <!-- Project 1 -->
+            <div class="project-card">
+              <div class="project-icon-box">
+                <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+              </div>
+              <div class="project-details">
+                <h4>Vincitore Benessere Luxury Landmark <span>15% - 18% Cost Cut</span></h4>
+                <p>Managed commercial luminaire integration, direct-sourcing from China factories to maximize margins.</p>
+              </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project-card">
+              <div class="project-icon-box" style="background-color: var(--accent);">
+                <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+              </div>
+              <div class="project-details">
+                <h4>Al Jaddaf Tower High-Rise Facade <span>12% - 15% Saved</span></h4>
+                <p>Led procurement of waterproof exterior facade lighting systems, bypassing distributor markups to meet tight deadlines.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Volunteering Section -->
+        <section>
+          <div class="section-title">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H7c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.04-.42 1.99-1.07 2.75z"/></svg>
+            Volunteering & Event Coordination
+          </div>
+          
+          <div style="display:flex; flex-direction:column; gap:8px;">
+            <div class="project-card">
+              <div class="project-details" style="grid-column: 1 / 3;">
+                <h4>Exhibition and Security Manager | ITEC M.E <span>09/2018 – 11/2018</span></h4>
+                <p>Coordinated stand layouts and crowd entry security at the India-UAE Partnership Summit 2018.</p>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <div class="project-details" style="grid-column: 1 / 3;">
+                <h4>Education Event Coordinator | ITEC M.E <span>12/2018 – 01/2019</span></h4>
+                <p>Managed space allocations and checklists for AFAIRS Exhibitions during The Great India Education Fair.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </main>
+
+    </div>
+
+    <!-- Page 2 Footer -->
+    <footer class="footer">
+      <span>Deepak Manglani — Infographic Resume</span>
+      <span>Page 2 of 2</span>
+    </footer>
+
+  </div>
+
+</body>
+</html>
