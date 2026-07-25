@@ -58,7 +58,7 @@ Commercially astute \*\*Commercial Operations Manager\*\* with over 14 years of 
 
 \*\*Commercial Operations \& Sales Manager\*\* | \*01/2024 – Present\*
 
-\* \*\*Commercial Governance:\*\* Lead strategic execution of high-volume sales pipelines and purchasing workflows for international B2B electronics and LED industrial trade profiles. 
+\* \*\*Commercial Governance:\*\* Lead strategic execution of high-volume sales pipelines and purchasing workflows for international B2B electronics and LED industrial trade profiles.
 
 \* \*\*Margin \& Risk Protection:\*\* Direct regional contract review, tariff positioning, and vendor quote structuring, mitigating delivery variance and enhancing gross profit margins.
 
@@ -190,11 +190,7 @@ Commercially astute \*\*Commercial Operations Manager\*\* with over 14 years of 
 
 \* \*\*Inventory Tracking:\*\* Maintained rigorous counter checklists and audit pipelines for physical deliverables and material assets distributed across target sectors.
 
-
-
 \---
-
-
 
 \## EDUCATION \& CERTIFICATIONS
 
@@ -208,15 +204,9 @@ Commercially astute \*\*Commercial Operations Manager\*\* with over 14 years of 
 
 \* \*\*Certified Tally ERP Accountant Course\*\* | Tally Academy, India
 
-
-
 \---
-
-
 
 \## LANGUAGES
 
-\* English (Fluent) | Hindi (Native) | Sindhi
-
-
+\* English (Fluent) | Hindi (Native) | Sindhi(Native) | Arabic(Basic)
 
